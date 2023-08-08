@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TopMenuRecipe</title>
+    <link href="CSS/reset.css" rel="stylesheet" />
+    <link href="CSS/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/form.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- this is a header -->
+    <header>
+      <nav class="navigator">
+        <ul>
+          <li>
+            <a href="index.html"
+              >HOME<img
+                src="images/home_Icon.png"
+                width="60"
+                height="40"
+                margin="0"
+            /></a>
+          </li>
+          <li>
+            <a href="page2_Demi.html"
+              >RECIPE<img
+                src="images/recipeIcon.png"
+                width="60"
+                height="40"
+                padding="0"
+            /></a>
+          </li>
+          <li>
+            <a href="page3_Demi.html"
+              >SUBSCRIBE FOR MORE<img
+                src="images/contactusIcon.png"
+                width="60"
+                height="40"
+                padding="0"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container" style="padding: 2.5em">
+      <h1 class="topic">
+        Subsciption for exclusive recipe at only 4.99$/monthly
+      </h1>
+      <h2 class="description">
+        Learn multicultural cruisine worldwide and allowing individuals to sign
+        up for a subscription and gain access to a collection of unique and
+        exclusive recipes from various cultures and regions around the world.
+      </h2>
+    </div>
+
+    <section
+      class="container"
+      style="display: flex; justify-content: space-around; flex-direction: row"
+    >
+      <form
+        style="flex-shrink: 0; flex-basis: 60%; margin-right: 2.5em"
+        id="payment"
+        method="post"
+        action="http://www.example.com/sb/payment"
+      >
+        <fieldset>
+          <legend>Billing Information (required)</legend>
+
+          <label for="fname">First Name</label>
+          <input type="text" id="firstBox" name="fName" required />
+
+          <label for="lname">Last Name</label>
+          <input type="text" id="lastBox" name="lName" required />
+
+          <label for="street">Street Address</label>
+          <input type="text" id="streetBox" name="street" required />
+
+          <label for="street2">Street Address 2</label>
+          <input type="text" id="streetBox2" name="street2" />
+
+          <label for="city">City</label>
+          <input type="text" id="cityBox" name="city" required />
+
+          <label for="state">State</label>
+          <input
+            list="stateList"
+            type="text"
+            id="stateBox"
+            name="state"
+            required
+          />
+          <datalist id="stateList">
+            <option value="AB">Alberta</option>
+            <option value="BC">British Columbia</option>
+            <option value="MB">Manitoba</option>
+            <option value="NB">New Brunswick</option>
+            <option value="NL">Newfoundland and Labrador</option>
+            <option value="NS">Nova Scotia</option>
+            <option value="ON">Ontario</option>
+            <option value="PE">Prince Edward Island</option>
+            <option value="QC">Quebec</option>
+            <option value="SK">Saskatchewan</option>
+            <option value="NT">Northwest Territories</option>
+            <option value="NU">Nunavut</option>
+            <option value="YT">Yukon</option>
+          </datalist>
+
+          <label for="zip">Zip/ Postal Code</label>
+          <input type="text" id="zipBox" name="zip" required />
+
+          <label for="country">Country</label>
+          <input
+            type="text"
+            id="countryBox"
+            name="country"
+            value="Canada"
+            required
+          />
+
+          <label for="phone">Phone</label>
+          <input
+            type="tel"
+            id="phoneBox"
+            name="phone"
+            required
+            pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
+          />
+        </fieldset>
+
+        <fieldset id="creditCard">
+          <legend>Credit Card (required)</legend>
+
+          <label class="cardLabel">
+            <input type="radio" id="amex" name="cCard" value="amex" />
+            <img
+              src="images/Credit_card_logo_Demi/AMEX_Demi.png"
+              alt="American Express"
+            />
+          </label>
+
+          <label class="cardLabel">
+            <input type="radio" id="discover" name="cCard" value="visa" />
+            <img
+              src="images/Credit_card_logo_Demi/AMEX_Demi (2).png"
+              alt="visa"
+            />
+          </label>
+
+          <label class="cardLabel">
+            <input
+              type="radio"
+              id="mastercard"
+              name="cCard"
+              value="mastercard"
+            />
+            <img
+              src="images/Credit_card_logo_Demi/AMEX_Demi (3).png"
+              alt="Mastercard"
+            />
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <label for="cardBox">Credit Card Number</label>
+          <input
+            type="text"
+            id="cardBox"
+            name="cardnum"
+            required
+            pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
+          />
+
+          <label for="monthList">Expiration Dat</label>
+          <select id="monthList" name="cardMonth" required>
+            <option value="">--Month--</option>
+            <option value="01">January (01)</option>
+            <option value="02">February (02)</option>
+            <option value="03">March (03)</option>
+            <option value="04">April (04)</option>
+            <option value="05">May (05)</option>
+            <option value="06">June (06)</option>
+            <option value="07">July (07)</option>
+            <option value="08">August (08)</option>
+            <option value="09">September (09)</option>
+            <option value="10">October (10)</option>
+            <option value="11">November (11)</option>
+            <option value="12">December (12)</option>
+          </select>
+
+          <select id="yearList" name="cardYear" required>
+            <option value="">--Year--</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+          </select>
+
+          <label for="cscBox">CSC:</label>
+          <input
+            type="text"
+            id="cscBox"
+            name="csc"
+            pattern="^\d{3}$"
+            maxlength="3"
+            required
+            placeholder="nnn"
+          />
+        </fieldset>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+
+      <div
+        style="display: flex; justify-content: center; flex-direction: column"
+      >
+        <img src="images/subscribe_demi.png" alt="subscribe" />
+        <video width="20%" height="30%" controls style="align-items: center">
+          <source id="vdo" src="video/top10menu.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </section>
+    <footer style="margin-top: 1.3em">
+      <div class="footer-content">
+        <div class="social-media">
+          <a href="https://www.instagram.com" target="_blank" rel="noopener">
+            <img
+              src="images/social media logo/instagram_logo_Demi.png"
+              alt="Instagram"
+            />
+          </a>
+          <a href="https://www.facebook.com" target="_blank" rel="noopener">
+            <img
+              src="images/social media logo/facebook_logo_Demi.png"
+              alt="Facebook"
+            />
+          </a>
+          <a href="https://www.tiktok.com" target="_blank" rel="noopener">
+            <img
+              src="images/social media logo/tiktok_logo_Demi.png"
+              alt="TikTok"
+            />
+          </a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener">
+            <img
+              src="images/social media logo/youtube_logo_Demi.png"
+              alt="YouTube"
+            />
+          </a>
+          <a href="https://www.twitter.com/home" target="_blank" rel="noopener">
+            <img
+              src="images/social media logo/twiiter_logo_Demi.png"
+              alt="twitter"
+            />
+          </a>
+          <div class="copy-right">
+            &copy; 2023 Top Menu <Recipe class="com"></Recipe> All rights
+            reserved.
+            <br />
+            <h6>created by Demi Keawbootdee Student ID: 300368351</h6>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
